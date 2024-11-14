@@ -7,18 +7,14 @@
 
 import SwiftUI
 //depth camera
-import AVFoundation
+
 
 
 struct ContentView: View {
+    @StateObject private var model = FrameManager()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        FrameView(image: model.frame)
+        .ignoresSafeArea()
     }
 }
 

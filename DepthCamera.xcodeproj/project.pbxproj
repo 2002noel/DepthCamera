@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA0C340F2CE5F0A80048D2C0 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C340E2CE5F0A80048D2C0 /* FrameView.swift */; };
+		EA0C34112CE5F2440048D2C0 /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C34102CE5F2440048D2C0 /* FrameManager.swift */; };
 		EA89961A2CE41714003BE043 /* DepthCameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8996192CE41714003BE043 /* DepthCameraApp.swift */; };
 		EA89961C2CE41714003BE043 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89961B2CE41714003BE043 /* ContentView.swift */; };
 		EA89961E2CE41715003BE043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA89961D2CE41715003BE043 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA0C340E2CE5F0A80048D2C0 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
+		EA0C34102CE5F2440048D2C0 /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
 		EA8996162CE41714003BE043 /* DepthCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepthCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8996192CE41714003BE043 /* DepthCameraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthCameraApp.swift; sourceTree = "<group>"; };
 		EA89961B2CE41714003BE043 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 			children = (
 				EA8996192CE41714003BE043 /* DepthCameraApp.swift */,
 				EA89961B2CE41714003BE043 /* ContentView.swift */,
+				EA0C340E2CE5F0A80048D2C0 /* FrameView.swift */,
+				EA0C34102CE5F2440048D2C0 /* FrameManager.swift */,
 				EA89961D2CE41715003BE043 /* Assets.xcassets */,
 				EA89961F2CE41715003BE043 /* Preview Content */,
 			);
@@ -257,8 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0C340F2CE5F0A80048D2C0 /* FrameView.swift in Sources */,
 				EA89961C2CE41714003BE043 /* ContentView.swift in Sources */,
 				EA89961A2CE41714003BE043 /* DepthCameraApp.swift in Sources */,
+				EA0C34112CE5F2440048D2C0 /* FrameManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +433,7 @@
 				DEVELOPMENT_TEAM = QR9XKU8WA5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera used for Recording";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +463,7 @@
 				DEVELOPMENT_TEAM = QR9XKU8WA5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera used for Recording";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
