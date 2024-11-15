@@ -9,9 +9,17 @@
 /* Begin PBXBuildFile section */
 		EA0C340F2CE5F0A80048D2C0 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C340E2CE5F0A80048D2C0 /* FrameView.swift */; };
 		EA0C34112CE5F2440048D2C0 /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C34102CE5F2440048D2C0 /* FrameManager.swift */; };
+		EA0C34152CE726600048D2C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C34142CE726600048D2C0 /* ViewController.swift */; };
+		EA0C341A2CE74A840048D2C0 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C34192CE74A840048D2C0 /* CameraModel.swift */; };
+		EA0C341D2CE759970048D2C0 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C341C2CE759970048D2C0 /* CameraView.swift */; };
+		EA0C34232CE75FA00048D2C0 /* Aespa in Frameworks */ = {isa = PBXBuildFile; productRef = EA0C34222CE75FA00048D2C0 /* Aespa */; };
+		EA0C342F2CE75FFF0048D2C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0C34262CE75FFE0048D2C0 /* Assets.xcassets */; };
+		EA0C34302CE75FFF0048D2C0 /* Aespa_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C34272CE75FFE0048D2C0 /* Aespa_iOSApp.swift */; };
+		EA0C34312CE75FFF0048D2C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0C34292CE75FFE0048D2C0 /* Preview Assets.xcassets */; };
+		EA0C34352CE76F340048D2C0 /* VideoContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C34342CE76F340048D2C0 /* VideoContentView.swift */; };
+		EA0C34372CE76F370048D2C0 /* VideoContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C34362CE76F370048D2C0 /* VideoContentViewModel.swift */; };
 		EA89961A2CE41714003BE043 /* DepthCameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8996192CE41714003BE043 /* DepthCameraApp.swift */; };
 		EA89961C2CE41714003BE043 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89961B2CE41714003BE043 /* ContentView.swift */; };
-		EA89961E2CE41715003BE043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA89961D2CE41715003BE043 /* Assets.xcassets */; };
 		EA8996212CE41715003BE043 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA8996202CE41715003BE043 /* Preview Assets.xcassets */; };
 		EA89962B2CE41715003BE043 /* DepthCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89962A2CE41715003BE043 /* DepthCameraTests.swift */; };
 		EA8996352CE41715003BE043 /* DepthCameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8996342CE41715003BE043 /* DepthCameraUITests.swift */; };
@@ -38,10 +46,20 @@
 /* Begin PBXFileReference section */
 		EA0C340E2CE5F0A80048D2C0 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
 		EA0C34102CE5F2440048D2C0 /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
+		EA0C34142CE726600048D2C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA0C34162CE747670048D2C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EA0C34192CE74A840048D2C0 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
+		EA0C341C2CE759970048D2C0 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		EA0C34262CE75FFE0048D2C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Downloads/Aespa-main/Demo/Aespa-iOS/Assets.xcassets"; sourceTree = "<group>"; };
+		EA0C34272CE75FFE0048D2C0 /* Aespa_iOSApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Aespa_iOSApp.swift; path = "../../../../Downloads/Aespa-main/Demo/Aespa-iOS/Aespa_iOSApp.swift"; sourceTree = "<group>"; };
+		EA0C34282CE75FFE0048D2C0 /* Aespa-iOS.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = "Aespa-iOS.entitlements"; path = "../../../../Downloads/Aespa-main/Demo/Aespa-iOS/Aespa-iOS.entitlements"; sourceTree = "<group>"; };
+		EA0C34292CE75FFE0048D2C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA0C34342CE76F340048D2C0 /* VideoContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContentView.swift; sourceTree = "<group>"; };
+		EA0C34362CE76F370048D2C0 /* VideoContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContentViewModel.swift; sourceTree = "<group>"; };
+		EA0C343A2CE770640048D2C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA8996162CE41714003BE043 /* DepthCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepthCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8996192CE41714003BE043 /* DepthCameraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthCameraApp.swift; sourceTree = "<group>"; };
 		EA89961B2CE41714003BE043 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EA89961D2CE41715003BE043 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA8996202CE41715003BE043 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA8996262CE41715003BE043 /* DepthCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DepthCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA89962A2CE41715003BE043 /* DepthCameraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthCameraTests.swift; sourceTree = "<group>"; };
@@ -55,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0C34232CE75FA00048D2C0 /* Aespa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +94,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA0C341B2CE759530048D2C0 /* CameraViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA0C34192CE74A840048D2C0 /* CameraModel.swift */,
+				EA89961B2CE41714003BE043 /* ContentView.swift */,
+				EA0C341C2CE759970048D2C0 /* CameraView.swift */,
+			);
+			path = CameraViewModel;
+			sourceTree = "<group>";
+		};
+		EA0C341E2CE75BCE0048D2C0 /* Aespa */ = {
+			isa = PBXGroup;
+			children = (
+				EA0C34272CE75FFE0048D2C0 /* Aespa_iOSApp.swift */,
+				EA0C34282CE75FFE0048D2C0 /* Aespa-iOS.entitlements */,
+				EA0C34262CE75FFE0048D2C0 /* Assets.xcassets */,
+				EA0C342A2CE75FFE0048D2C0 /* Preview Content */,
+			);
+			path = Aespa;
+			sourceTree = "<group>";
+		};
+		EA0C342A2CE75FFE0048D2C0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EA0C34292CE75FFE0048D2C0 /* Preview Assets.xcassets */,
+			);
+			name = "Preview Content";
+			path = "../../../../Downloads/Aespa-main/Demo/Aespa-iOS/Preview Content";
+			sourceTree = "<group>";
+		};
+		EA0C343B2CE771580048D2C0 /* Fin */ = {
+			isa = PBXGroup;
+			children = (
+				EA0C34362CE76F370048D2C0 /* VideoContentViewModel.swift */,
+				EA0C34342CE76F340048D2C0 /* VideoContentView.swift */,
+			);
+			path = Fin;
+			sourceTree = "<group>";
+		};
+		EA0C343C2CE771680048D2C0 /* Frame */ = {
+			isa = PBXGroup;
+			children = (
+				EA0C340E2CE5F0A80048D2C0 /* FrameView.swift */,
+				EA0C34102CE5F2440048D2C0 /* FrameManager.swift */,
+				EA0C34142CE726600048D2C0 /* ViewController.swift */,
+			);
+			path = Frame;
+			sourceTree = "<group>";
+		};
 		EA89960D2CE41714003BE043 = {
 			isa = PBXGroup;
 			children = (
@@ -98,11 +166,13 @@
 		EA8996182CE41714003BE043 /* DepthCamera */ = {
 			isa = PBXGroup;
 			children = (
+				EA0C341E2CE75BCE0048D2C0 /* Aespa */,
+				EA0C341B2CE759530048D2C0 /* CameraViewModel */,
+				EA0C34162CE747670048D2C0 /* Info.plist */,
 				EA8996192CE41714003BE043 /* DepthCameraApp.swift */,
-				EA89961B2CE41714003BE043 /* ContentView.swift */,
-				EA0C340E2CE5F0A80048D2C0 /* FrameView.swift */,
-				EA0C34102CE5F2440048D2C0 /* FrameManager.swift */,
-				EA89961D2CE41715003BE043 /* Assets.xcassets */,
+				EA0C343B2CE771580048D2C0 /* Fin */,
+				EA0C343A2CE770640048D2C0 /* Assets.xcassets */,
+				EA0C343C2CE771680048D2C0 /* Frame */,
 				EA89961F2CE41715003BE043 /* Preview Content */,
 			);
 			path = DepthCamera;
@@ -149,6 +219,9 @@
 			dependencies = (
 			);
 			name = DepthCamera;
+			packageProductDependencies = (
+				EA0C34222CE75FA00048D2C0 /* Aespa */,
+			);
 			productName = DepthCamera;
 			productReference = EA8996162CE41714003BE043 /* DepthCamera.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +294,9 @@
 				Base,
 			);
 			mainGroup = EA89960D2CE41714003BE043;
+			packageReferences = (
+				EA0C34212CE75C600048D2C0 /* XCRemoteSwiftPackageReference "Aespa" */,
+			);
 			productRefGroup = EA8996172CE41714003BE043 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,8 +313,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0C34312CE75FFF0048D2C0 /* Preview Assets.xcassets in Resources */,
 				EA8996212CE41715003BE043 /* Preview Assets.xcassets in Resources */,
-				EA89961E2CE41715003BE043 /* Assets.xcassets in Resources */,
+				EA0C342F2CE75FFF0048D2C0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,10 +340,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0C34152CE726600048D2C0 /* ViewController.swift in Sources */,
 				EA0C340F2CE5F0A80048D2C0 /* FrameView.swift in Sources */,
 				EA89961C2CE41714003BE043 /* ContentView.swift in Sources */,
+				EA0C34302CE75FFF0048D2C0 /* Aespa_iOSApp.swift in Sources */,
 				EA89961A2CE41714003BE043 /* DepthCameraApp.swift in Sources */,
 				EA0C34112CE5F2440048D2C0 /* FrameManager.swift in Sources */,
+				EA0C341A2CE74A840048D2C0 /* CameraModel.swift in Sources */,
+				EA0C34352CE76F340048D2C0 /* VideoContentView.swift in Sources */,
+				EA0C341D2CE759970048D2C0 /* CameraView.swift in Sources */,
+				EA0C34372CE76F370048D2C0 /* VideoContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +516,10 @@
 				DEVELOPMENT_TEAM = QR9XKU8WA5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DepthCamera/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera used for Recording";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = Testing;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To Download Recording";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -463,7 +549,10 @@
 				DEVELOPMENT_TEAM = QR9XKU8WA5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DepthCamera/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera used for Recording";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = Testing;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To Download Recording";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -598,6 +687,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA0C34212CE75C600048D2C0 /* XCRemoteSwiftPackageReference "Aespa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/enebin/Aespa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA0C34222CE75FA00048D2C0 /* Aespa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA0C34212CE75C600048D2C0 /* XCRemoteSwiftPackageReference "Aespa" */;
+			productName = Aespa;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA89960E2CE41714003BE043 /* Project object */;
 }

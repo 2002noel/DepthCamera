@@ -2,14 +2,15 @@ import Foundation
 import AVFoundation
 import CoreImage
 
-class FrameManager: NSObject, ObservableObject {
+class FrameManager: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     @Published var frame: CGImage?
     private var Permission = false
     private let session = AVCaptureSession()
     private let sessionQueue = DispatchQueue(label: "session queue")
     private let context = CIContext()
+    private let output = AVCapturePhotoOutput()
     
-    private var videoDevice: AVCaptureDevice?  // Make sure we store the device reference
+    private var videoDevice: AVCaptureDevice?
     @Published var Zoom: CGFloat = 1.0
     
     override init() {
@@ -29,6 +30,7 @@ class FrameManager: NSObject, ObservableObject {
             AVCaptureDevice.requestAccess(for: .video) { granted in
                 if granted {
                     self.Permission = true
+                    self.setupSession()
                 }
             }
         default:
@@ -43,35 +45,52 @@ class FrameManager: NSObject, ObservableObject {
             try device.lockForConfiguration()
             device.videoZoomFactor = max(1.0, min(factor, device.activeFormat.videoMaxZoomFactor))
             device.unlockForConfiguration()
-            self.Zoom = device.videoZoomFactor // Update published zoomFactor
+            self.Zoom = device.videoZoomFactor
         } catch {
             print("Failed to set zoom factor: \(error)")
         }
     }
     
     func setupSession() {
-        print("Setting up session")
         guard !session.isRunning else { return }
-        let videooutput = AVCaptureVideoDataOutput()
-        
         guard Permission else { return }
         
-        guard let videodevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else { return }
+        let videooutput = AVCaptureVideoDataOutput()
         
-        // Store the video device reference
+        guard let videodevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else { return }
         self.videoDevice = videodevice
         
         guard let videoinput = try? AVCaptureDeviceInput(device: videodevice) else { return }
-        
         guard session.canAddInput(videoinput) else { return }
         session.addInput(videoinput)
         
+        guard session.canAddOutput(videooutput) else { return }
         videooutput.setSampleBufferDelegate(self, queue: sessionQueue)
         session.addOutput(videooutput)
         
-        // Rotate the camera to portrait
-        session.connections.first?.videoRotationAngle = 90
-        session.startRunning()
+        guard session.canAddOutput(output) else { return }
+        session.addOutput(output)
+        
+        // Set orientation
+        if let connection = videooutput.connection(with: .video) {
+            connection.videoRotationAngle = 90
+        }
+    }
+    
+    func startSession() {
+        sessionQueue.async {
+            if !self.session.isRunning {
+                self.session.startRunning()
+            }
+        }
+    }
+    
+    func stopSession() {
+        sessionQueue.async {
+            if self.session.isRunning {
+                self.session.stopRunning()
+            }
+        }
     }
 }
 
@@ -88,7 +107,7 @@ extension FrameManager: AVCaptureVideoDataOutputSampleBufferDelegate {
         guard let pixelbuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return nil }
         
         let ciimage = CIImage(cvPixelBuffer: pixelbuffer)
-        guard let cgImage = CIContext().createCGImage(ciimage, from: ciimage.extent) else { return nil }
+        guard let cgImage = context.createCGImage(ciimage, from: ciimage.extent) else { return nil }
         return cgImage
     }
 }

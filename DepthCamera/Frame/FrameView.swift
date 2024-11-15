@@ -16,8 +16,20 @@ struct FrameView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .scaleEffect(scale) // Apply the scale to the image
+                
+                
+                //record
+                Button(action: {
+                    print("takingvideo")
+                }) {
+                    Image(systemName: "circle.fill")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.red)
+                }
             } else {
                 Color.black
+                
             }
         }
         .gesture(
@@ -35,12 +47,16 @@ struct FrameView: View {
                 }
         )
         .onAppear {
+            
             frameManager.checkPermission()
-            frameManager.setZoomFactor(1.0) // Initialize zoom to 1
+            frameManager.setZoomFactor(1.0)
+            frameManager.startSession()// Initialize zoom to 1
+        }
+        .onDisappear {
+            frameManager.stopSession()
         }
     }
 }
-
 #Preview {
     FrameView()
 }
