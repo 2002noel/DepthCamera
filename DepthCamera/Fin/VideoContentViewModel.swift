@@ -1,4 +1,3 @@
-
 import Combine
 import SwiftUI
 import Foundation
@@ -10,18 +9,16 @@ class VideoContentViewModel: ObservableObject {
     
     var preview: some View {
         aespaSession.interactivePreview()
+        
     }
     
-    private var subscription = Set<AnyCancellable>()
     
-    @Published var videoAlbumCover: Image?
-    @Published var photoAlbumCover: Image?
     
     @Published var videoFiles: [VideoAsset] = []
     
     init() {
-
-        let option = AespaOption(albumName: nil)
+        // If you don't want to make an album, you can set `albumName` to `nil`
+        let option = AespaOption(albumName: "Recent")
         self.aespaSession = Aespa.session(with: option)
 
         // Common setting
@@ -36,51 +33,13 @@ class VideoContentViewModel: ObservableObject {
                 }
             }
 
-        // Video-only setting
         aespaSession
             .video(.mute)
             .video(.stabilization(mode: .auto))
 
-        // Prepare video album cover
-        aespaSession.videoFilePublisher
-            .receive(on: DispatchQueue.main)
-            .map { result -> Image? in
-                if case .success(let file) = result {
-                    return file.thumbnailImage
-                } else {
-                    return nil
-                }
-            }
-            .assign(to: \.videoAlbumCover, on: self)
-            .store(in: &subscription)
-        
-
-        
-        aespaSession.videoAssetEventPublisher
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] event in
-                guard let self else { return }
-                
-                if case .deleted = event {
-                    self.fetchVideoFiles()
-                
-                    
-                    // Update thumbnail
-                    self.videoAlbumCover = self.videoFiles.first?.thumbnailImage
-                }
-            }
-            .store(in: &subscription)
-
     }
     
-    func fetchVideoFiles() {
-        // File fetching task can cause low reponsiveness when called from main thread
-        Task(priority: .utility) {
-            let fetchedFiles = await aespaSession.fetchVideoFiles()
-            DispatchQueue.main.async { self.videoFiles = fetchedFiles }
-        }
-    }
-    
+
 }
 
 
