@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA0C340F2CE5F0A80048D2C0 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C340E2CE5F0A80048D2C0 /* FrameView.swift */; };
-		EA0C34112CE5F2440048D2C0 /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C34102CE5F2440048D2C0 /* FrameManager.swift */; };
-		EA0C34152CE726600048D2C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C34142CE726600048D2C0 /* ViewController.swift */; };
 		EA0C341A2CE74A840048D2C0 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C34192CE74A840048D2C0 /* CameraModel.swift */; };
 		EA0C341D2CE759970048D2C0 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C341C2CE759970048D2C0 /* CameraView.swift */; };
 		EA0C34232CE75FA00048D2C0 /* Aespa in Frameworks */ = {isa = PBXBuildFile; productRef = EA0C34222CE75FA00048D2C0 /* Aespa */; };
@@ -18,6 +15,9 @@
 		EA0C34312CE75FFF0048D2C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0C34292CE75FFE0048D2C0 /* Preview Assets.xcassets */; };
 		EA0C34352CE76F340048D2C0 /* VideoContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C34342CE76F340048D2C0 /* VideoContentView.swift */; };
 		EA0C34372CE76F370048D2C0 /* VideoContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C34362CE76F370048D2C0 /* VideoContentViewModel.swift */; };
+		EA1F44F02CF4A9E000FD371B /* DepthVidewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1F44EF2CF4A9DF00FD371B /* DepthVidewViewController.swift */; };
+		EA1F44F22CF4AB8700FD371B /* DepthVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1F44F12CF4AB8700FD371B /* DepthVideoView.swift */; };
+		EA1F44F82CF598B000FD371B /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1F44F72CF598B000FD371B /* Storyboard.storyboard */; };
 		EA89961A2CE41714003BE043 /* DepthCameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8996192CE41714003BE043 /* DepthCameraApp.swift */; };
 		EA89961C2CE41714003BE043 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89961B2CE41714003BE043 /* ContentView.swift */; };
 		EA8996212CE41715003BE043 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA8996202CE41715003BE043 /* Preview Assets.xcassets */; };
@@ -44,9 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EA0C340E2CE5F0A80048D2C0 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
-		EA0C34102CE5F2440048D2C0 /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
-		EA0C34142CE726600048D2C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA0C34162CE747670048D2C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EA0C34192CE74A840048D2C0 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		EA0C341C2CE759970048D2C0 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
@@ -57,6 +54,9 @@
 		EA0C34342CE76F340048D2C0 /* VideoContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContentView.swift; sourceTree = "<group>"; };
 		EA0C34362CE76F370048D2C0 /* VideoContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContentViewModel.swift; sourceTree = "<group>"; };
 		EA0C343A2CE770640048D2C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA1F44EF2CF4A9DF00FD371B /* DepthVidewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthVidewViewController.swift; sourceTree = "<group>"; };
+		EA1F44F12CF4AB8700FD371B /* DepthVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthVideoView.swift; sourceTree = "<group>"; };
+		EA1F44F72CF598B000FD371B /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		EA8996162CE41714003BE043 /* DepthCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepthCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8996192CE41714003BE043 /* DepthCameraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthCameraApp.swift; sourceTree = "<group>"; };
 		EA89961B2CE41714003BE043 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				EA0C34192CE74A840048D2C0 /* CameraModel.swift */,
-				EA89961B2CE41714003BE043 /* ContentView.swift */,
 				EA0C341C2CE759970048D2C0 /* CameraView.swift */,
 			);
 			path = CameraViewModel;
@@ -133,19 +132,20 @@
 			path = Fin;
 			sourceTree = "<group>";
 		};
-		EA0C343C2CE771680048D2C0 /* Frame */ = {
+		EA1F44EE2CF4A9A100FD371B /* VideoView2.0 */ = {
 			isa = PBXGroup;
 			children = (
-				EA0C340E2CE5F0A80048D2C0 /* FrameView.swift */,
-				EA0C34102CE5F2440048D2C0 /* FrameManager.swift */,
-				EA0C34142CE726600048D2C0 /* ViewController.swift */,
+				EA1F44EF2CF4A9DF00FD371B /* DepthVidewViewController.swift */,
+				EA1F44F12CF4AB8700FD371B /* DepthVideoView.swift */,
+				EA89961B2CE41714003BE043 /* ContentView.swift */,
 			);
-			path = Frame;
+			path = VideoView2.0;
 			sourceTree = "<group>";
 		};
 		EA89960D2CE41714003BE043 = {
 			isa = PBXGroup;
 			children = (
+				EA1F44F72CF598B000FD371B /* Storyboard.storyboard */,
 				EA8996182CE41714003BE043 /* DepthCamera */,
 				EA8996292CE41715003BE043 /* DepthCameraTests */,
 				EA8996332CE41715003BE043 /* DepthCameraUITests */,
@@ -166,13 +166,13 @@
 		EA8996182CE41714003BE043 /* DepthCamera */ = {
 			isa = PBXGroup;
 			children = (
+				EA1F44EE2CF4A9A100FD371B /* VideoView2.0 */,
 				EA0C341E2CE75BCE0048D2C0 /* Aespa */,
 				EA0C341B2CE759530048D2C0 /* CameraViewModel */,
 				EA0C34162CE747670048D2C0 /* Info.plist */,
 				EA8996192CE41714003BE043 /* DepthCameraApp.swift */,
 				EA0C343B2CE771580048D2C0 /* Fin */,
 				EA0C343A2CE770640048D2C0 /* Assets.xcassets */,
-				EA0C343C2CE771680048D2C0 /* Frame */,
 				EA89961F2CE41715003BE043 /* Preview Content */,
 			);
 			path = DepthCamera;
@@ -314,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA0C34312CE75FFF0048D2C0 /* Preview Assets.xcassets in Resources */,
+				EA1F44F82CF598B000FD371B /* Storyboard.storyboard in Resources */,
 				EA8996212CE41715003BE043 /* Preview Assets.xcassets in Resources */,
 				EA0C342F2CE75FFF0048D2C0 /* Assets.xcassets in Resources */,
 			);
@@ -340,15 +341,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA0C34152CE726600048D2C0 /* ViewController.swift in Sources */,
-				EA0C340F2CE5F0A80048D2C0 /* FrameView.swift in Sources */,
 				EA89961C2CE41714003BE043 /* ContentView.swift in Sources */,
 				EA0C34302CE75FFF0048D2C0 /* Aespa_iOSApp.swift in Sources */,
+				EA1F44F02CF4A9E000FD371B /* DepthVidewViewController.swift in Sources */,
 				EA89961A2CE41714003BE043 /* DepthCameraApp.swift in Sources */,
-				EA0C34112CE5F2440048D2C0 /* FrameManager.swift in Sources */,
 				EA0C341A2CE74A840048D2C0 /* CameraModel.swift in Sources */,
 				EA0C34352CE76F340048D2C0 /* VideoContentView.swift in Sources */,
 				EA0C341D2CE759970048D2C0 /* CameraView.swift in Sources */,
+				EA1F44F22CF4AB8700FD371B /* DepthVideoView.swift in Sources */,
 				EA0C34372CE76F370048D2C0 /* VideoContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

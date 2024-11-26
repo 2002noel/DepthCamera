@@ -50,7 +50,7 @@ class CameraModel: NSObject, AVCapturePhotoCaptureDelegate, ObservableObject, AV
         do{
             self.session.beginConfiguration()
             
-            guard let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {return}
+            guard let device = AVCaptureDevice.default(.builtInDualWideCamera, for: .video, position: .back) else {return}
             
             let input = try AVCaptureDeviceInput(device: device)
             
